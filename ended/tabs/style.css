@@ -1,0 +1,14 @@
+body, .main {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    background-color: rgba(70,69,67,0.34);
+}
+
+.factory-item {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000cd0
+}

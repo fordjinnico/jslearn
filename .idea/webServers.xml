@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="71f50bbd-5856-4bc6-ae53-769d3750a7fc" name="webstorm" url="http://localhost:9230">
+        <fileTransfer port="0" mountedRoot="C:\OpenServer2\OSPanel\domains\jslearn" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

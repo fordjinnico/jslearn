@@ -1,0 +1,50 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    background-color: #e6e6e6;
+}
+
+.main {
+
+    height: 100vh;
+
+    width: 100%;
+    position: relative;
+}
+
+.main {
+    font-size: 3rem;
+}
+
+.calculator {
+    position: absolute;
+    top: 25%;
+    display: block;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    cursor: pointer;
+}
+
+td {
+    border: 2px solid #bfbfbf;
+vertical-align: middle;
+}
+
+#result {
+    color: #a0a0a0;    
+}
+
+.calc-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+#result {
+    text-align: right;
+}
