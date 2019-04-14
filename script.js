@@ -29,6 +29,7 @@ calculator.addEventListener('click', (e) => {
             if (values.calculated == true) {
                 values.first = res;
             }
+            
         } else {
             result.value = calcResults();
             values.first = '';
