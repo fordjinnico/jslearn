@@ -12,8 +12,22 @@ const values = {
     'first': '',
     'operation': '',
     'second': '',
-    'calculated': false
+    'calculated': false,
+    'opCalled': 0
 };
+
+calculator.addEventListener('click', (e) => {
+    let res = e.target.textContent; //содержимое ячейки
+if (values.calculated == true && values.opCalled > 0 && ((res == '+') || (res == '-') || (res == '/') || (res == '*'))) {
+values.opCalled++;
+values.operation = res;
+} else if (values.calculated == true && values.opCalled < 1 &&((res == '+') || (res == '-') || (res == '/') || (res == '*'))) {
+    values.first = e.target.textContent;
+    values.opCalled++;
+}
+});
+
+
 
 calculator.addEventListener('click', (e) => { //отлавливаем событие клика по таблице
     e.preventDefault();
@@ -22,17 +36,16 @@ calculator.addEventListener('click', (e) => { //отлавливаем собы�
 
     if ((res == '+') || (res == '-') || (res == '/') || (res == '*') || (res == '=')) { //проверка нажатия кнопки операции
         if ((res != '=')) { //если не равно - меняем значение аттрибута объекта для вычислений на символ операции и выводим символ на страницу 
+
             opClicked = true;
             result.value = res;
             values.operation = res;
-
-            if (values.calculated == true) { //по идее должно присвоить результат вычислений объекта values.first и продолжить вычисления с этого места, но не работает
-                values.first = res;
-            }
+            
+          
 
         } else { //если нажато равно - вызываем функцию в которой происходят все вычисления, после чего сбрасываем объект до начального состояния
             result.value = calcResults();
-            values.first = '';
+            values.first = result.value;
             values.operation = '';
             values.second = '';
             values.calculated = true;
@@ -60,9 +73,14 @@ calculator.addEventListener('click', (e) => { //отлавливаем собы�
                 sum = Number(values.first) * Number(values.second);
             }
             console.log(sum);
-
+            values.opCalled = 0;
             return sum;
         }
     }
 
 });
+
+/*
+
+
+*/
